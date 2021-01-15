@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: arial, sans-serif;
+  min-width: 400px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #33194b;
+  background-image: url("./img/Scooby-doo.jpg"), url("./img/spider-web.png");
+  background-position: left bottom, right top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 60vh;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.description {
+  position: relative;
+  margin: 20px 0 40px;
+}
+
+.description h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #ff9628;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.board {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  background-color: black;
+  width: 60vw;
+  height: 60vw;
+  /* border: 4px solid black; */
+}
+
+.board div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  height: 32%;
+  width: 32%;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .board {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 500px) {
+  .board {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.board .circle,
+.board .crossContainer {
+  width: 70%;
+  height: 70%;
+}
+
+.board .crossContainer {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.board .circle {
+  border: 8px solid black;
+  border-radius: 50%;
+}
+
+.board .cross {
+  background-color: black;
+  height: calc(100% * 1.4);
+  width: 8px;
+  position: relative;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.board .cross:after {
+  background-color: black;
+  content: "";
+  height: 8px;
+  left: -950%;
+  position: absolute;
+  top: calc(50% - 4px);
+  width: 160px;
+}
+
+.winDisplay {
+  display: block;
+  line-height: 30px;
+  color: red;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  width: 100px;
+  border: 2px solid #000;
+  background-color: #ff9728;
+  border-radius: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  top: 90px;
+  left: calc(50% - 50px);
+}
+/*# sourceMappingURL=styles.css.map */
